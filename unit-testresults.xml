@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="11" time="0.555" timestamp="2022-05-15T20:34:54.686866" hostname="Preetham"><testcase classname="test.test_data_helper" name="test_dataset_name_unix" time="0.003" /><testcase classname="test.test_data_helper" name="test_dataset_name_win" time="0.001" /><testcase classname="test.test_data_helper" name="test_iso8601_to_epoch_ms" time="0.010" /><testcase classname="test.test_data_helper" name="test_map_to_app_insight_entry_for_aml_parent_run" time="0.005" /><testcase classname="test.test_history_helper" name="test_get_epoch_list" time="0.002" /><testcase classname="test.test_history_helper" name="test_get_accuracy_list" time="0.001" /><testcase classname="test.test_history_helper" name="test_get_accuracy_per_epoch" time="0.001" /><testcase classname="test.test_history_helper" name="test_get_accuracy_per_epoch_method_calls" time="0.004"><failure message="AssertionError: assert 0 == 1&#10; +  where 0 = &lt;MagicMock name='get_accuracy_list' id='2731882134016'&gt;.call_count">mock_get_epoch_list = &lt;MagicMock name='get_accuracy_list' id='2731882134016'&gt;, mock_get_accuracy_list = &lt;MagicMock name='get_epoch_list' id='2731882191168'&gt;
+
+    @patch("src.history_helper.get_epoch_list")
+    @patch("src.history_helper.get_accuracy_list")
+    def test_get_accuracy_per_epoch_method_calls(mock_get_epoch_list, mock_get_accuracy_list):
+        # prep
+        history_epoch = [1, 2, 3, 4, 5]
+        history_dictionary = {
+            "accuracy": [5, 6, 7, 8, 9]
+        }
+        history_obj = history()
+        history_obj.set_epoch(history_epoch)
+        history_obj.set_history(history_dictionary)
+    
+        # act
+        _ = get_accuracy_per_epoch(history=history_obj)
+    
+        # assert
+&gt;       assert mock_get_epoch_list.call_count == 1
+E       AssertionError: assert 0 == 1
+E        +  where 0 = &lt;MagicMock name='get_accuracy_list' id='2731882134016'&gt;.call_count
+
+test\test_history_helper.py:71: AssertionError</failure></testcase><testcase classname="test.test_image_helper" name="test_image_helper_function" time="0.007"><failure message="AssertionError: assert 'C:\\Users\\p...est_image.png' == 'C:\\Users\\p...est_image.png'&#10;  Skipping 54 identical leading characters in diff, use -v to show&#10;  - \test_data\test_image.png&#10;  ?           -&#10;  + \test_datatest_image.png">def test_image_helper_function():
+        # prep
+        attribute = "accuracy"
+        history_dictionary = {
+            attribute: [5, 6, 7, 8, 9]
+        }
+        history_obj = history()
+        history_obj.set_history(history_dictionary)
+    
+        current_dir = os.getcwd()
+        image_folder = os.path.join(os.path.join(current_dir, "test"), "test_data")
+        image_name = "test_image.png"
+        title = "Sample Image"
+        y_label = "Accuracy"
+        x_label = "epochs"
+        legend_location = "upper left"
+        colour = "r"
+    
+        if os.path.exists(image_folder) is False:
+            os.mkdir(image_folder)
+    
+        expected_response = os.path.join(image_folder, image_name)
+    
+        # act
+        actual_response = get_image(history=history_obj, attribute=attribute,
+                                    image_folder=image_folder, image_name=image_name,
+                                    title=title, y_label=y_label, x_label=x_label,
+                                    legend_location=legend_location, colour=colour)
+    
+        # assert
+&gt;       assert actual_response == expected_response
+E       AssertionError: assert 'C:\\Users\\p...est_image.png' == 'C:\\Users\\p...est_image.png'
+E         Skipping 54 identical leading characters in diff, use -v to show
+E         - \test_data\test_image.png
+E         ?           -
+E         + \test_datatest_image.png
+
+test\test_image_helper.py:38: AssertionError</failure></testcase><testcase classname="test.test_image_helper" name="test_image_helper_defaults" time="0.006"><failure message="AssertionError: assert 'C:\\Users\\p...est_image.png' == 'C:\\Users\\p...est_image.png'&#10;  Skipping 54 identical leading characters in diff, use -v to show&#10;  - \test_data\test_image.png&#10;  ?           -&#10;  + \test_datatest_image.png">def test_image_helper_defaults():
+        # prep
+        attribute = "accuracy"
+        history_dictionary = {
+            attribute: [5, 6, 7, 8, 9]
+        }
+        history_obj = history()
+        history_obj.set_history(history_dictionary)
+    
+        current_dir = os.getcwd()
+        image_folder = os.path.join(os.path.join(current_dir, "test"), "test_data")
+        image_name = "test_image.png"
+        title = "Sample Image"
+        y_label = "Accuracy"
+    
+        if os.path.exists(image_folder) is False:
+            os.mkdir(image_folder)
+    
+        expected_response = os.path.join(image_folder, image_name)
+    
+        # act
+        actual_response = get_image(history=history_obj, attribute=attribute,
+                                    image_folder=image_folder, image_name=image_name,
+                                    title=title, y_label=y_label)
+    
+        # assert
+&gt;       assert actual_response == expected_response
+E       AssertionError: assert 'C:\\Users\\p...est_image.png' == 'C:\\Users\\p...est_image.png'
+E         Skipping 54 identical leading characters in diff, use -v to show
+E         - \test_data\test_image.png
+E         ?           -
+E         + \test_datatest_image.png
+
+test\test_image_helper.py:72: AssertionError</failure></testcase><testcase classname="test.test_image_helper" name="test_image_helper_exception" time="0.010"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">def test_image_helper_exception():
+        # prep
+        attribute = "accuracy"
+        history_dictionary = {
+            attribute: [5, 6, 7, 8, 9]
+        }
+        history_obj = history()
+        history_obj.set_history(history_dictionary)
+    
+        current_dir = os.getcwd()
+        image_folder = os.path.join(os.path.join(current_dir, "test"), "test_data")
+        image_name = "test_image.png"
+        title = "Sample Image"
+        y_label = "Accuracy"
+    
+        if os.path.exists(image_folder) is True:
+            try:
+                shutil.rmtree(image_folder)
+            except OSError as e:
+                print("Error: %s - %s." % (e.filename, e.strerror))
+    
+        # act assert
+        with pytest.raises(ValueError):
+&gt;           get_image(history=history_obj, attribute=attribute,
+                      image_folder=image_folder, image_name=image_name,
+                      title=title, y_label=y_label)
+E           Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+test\test_image_helper.py:103: Failed</failure></testcase></testsuite></testsuites>

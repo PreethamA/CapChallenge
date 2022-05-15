@@ -1,0 +1,19 @@
+name: AudiPMTTechChallenge
+channels:
+  - conda-forge
+  - defaults
+  - anaconda
+dependencies:
+  - python=3.8.8
+  - PyJWT==1.7.1
+  - click=7.1.2
+  - environs=7.4.0
+  - flake8=3.8.4
+  - flake8-quotes=3.2.0
+  - mock=4.0.3
+  - pip=21.0.1
+  - pytest=6.2.1
+  - pytest-cov=2.11.0
+  - PyYAML=5.3.1
+  - pip:
+    - flake8-formatter-junit-xml==0.0.6
