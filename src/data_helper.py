@@ -3,13 +3,12 @@ import datetime
 import re
 
 def get_dataset_name(filepath)->str:
- '''
-:param filepath: str->filepath
-:return:str-> folder name
-'''
-    dir_name=os.path.basename(os.path.normpath(filepath))
-    return dir_name
-
+    '''
+    :param filepath: str->filepath
+    :return:str-> folder name
+    '''
+    dir=os.path.basename(os.path.normpath(filepath))
+    return dir
 def map_to_app_insight_entry(aml_run_details, experiment_id, experiment_name, env)->dict:
     '''
     :param aml_run_details: dict containing experiment execution details

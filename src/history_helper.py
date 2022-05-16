@@ -7,19 +7,18 @@ class history:
     def __init__(self):
         self.lis=[]
         self.dic={}
-        self.attribute = "accuracy"
-        self.current_dir = os.getcwd()
-        self.image_folder = os.path.join(os.path.join(self.current_dir, "test"), "test_data")
-        self.image_name = "test_image.png"
-        self.title = "Sample Image"
-        self.y_label = "Accuracy"
-        self.x_label = "epochs"
-        self.legend_location = "upper left"
-        self.colour = "r"
+        self.attribute = " "
+        self.title = " "
+        self.y_label = " "
+        self.x_label = " "
+        self.legend_location = " "
+        self.colour = " "
+        self.imagename = ''
+        self.currentdir = ''
+        self.imagefolder = ''
     # setter method
     def set_epoch(self, list2):
        self.lis=list2
-
 
     def get_epoch(self):
         return self.lis
@@ -29,12 +28,15 @@ class history:
 
     def get_history(self):
         return self.dic
-    def set_image_detaails(self,imagfolder,imagname):
-        self.image_name=imagname
-        self.image_folder=imagfolder
+
+    def set_image_detaails(self,image_name,current_dir,image_folder):
+        self.imagename=image_name
+        self.currentdir =current_dir
+        self.imagefolder=image_folder
+
 
     def get_image_detaails(self):
-        return self.image_folder+self.image_name
+        return os.path.join(self.imagefolder,self.imagename)
 
 
 def get_epoch_list(history)->list:

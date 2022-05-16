@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="11" time="0.555" timestamp="2022-05-15T20:34:54.686866" hostname="Preetham"><testcase classname="test.test_data_helper" name="test_dataset_name_unix" time="0.003" /><testcase classname="test.test_data_helper" name="test_dataset_name_win" time="0.001" /><testcase classname="test.test_data_helper" name="test_iso8601_to_epoch_ms" time="0.010" /><testcase classname="test.test_data_helper" name="test_map_to_app_insight_entry_for_aml_parent_run" time="0.005" /><testcase classname="test.test_history_helper" name="test_get_epoch_list" time="0.002" /><testcase classname="test.test_history_helper" name="test_get_accuracy_list" time="0.001" /><testcase classname="test.test_history_helper" name="test_get_accuracy_per_epoch" time="0.001" /><testcase classname="test.test_history_helper" name="test_get_accuracy_per_epoch_method_calls" time="0.004"><failure message="AssertionError: assert 0 == 1&#10; +  where 0 = &lt;MagicMock name='get_accuracy_list' id='2731882134016'&gt;.call_count">mock_get_epoch_list = &lt;MagicMock name='get_accuracy_list' id='2731882134016'&gt;, mock_get_accuracy_list = &lt;MagicMock name='get_epoch_list' id='2731882191168'&gt;
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="11" time="0.330" timestamp="2022-05-16T11:11:13.265657" hostname="Preetham"><testcase classname="test.test_data_helper" name="test_dataset_name_unix" time="0.002" /><testcase classname="test.test_data_helper" name="test_dataset_name_win" time="0.001" /><testcase classname="test.test_data_helper" name="test_iso8601_to_epoch_ms" time="0.004" /><testcase classname="test.test_data_helper" name="test_map_to_app_insight_entry_for_aml_parent_run" time="0.003" /><testcase classname="test.test_history_helper" name="test_get_epoch_list" time="0.001" /><testcase classname="test.test_history_helper" name="test_get_accuracy_list" time="0.001" /><testcase classname="test.test_history_helper" name="test_get_accuracy_per_epoch" time="0.001" /><testcase classname="test.test_history_helper" name="test_get_accuracy_per_epoch_method_calls" time="0.002"><failure message="AssertionError: assert 0 == 1&#10; +  where 0 = &lt;MagicMock name='get_accuracy_list' id='2748199811536'&gt;.call_count">mock_get_epoch_list = &lt;MagicMock name='get_accuracy_list' id='2748199811536'&gt;, mock_get_accuracy_list = &lt;MagicMock name='get_epoch_list' id='2748199864592'&gt;
 
     @patch("src.history_helper.get_epoch_list")
     @patch("src.history_helper.get_accuracy_list")
@@ -18,9 +18,9 @@
         # assert
 &gt;       assert mock_get_epoch_list.call_count == 1
 E       AssertionError: assert 0 == 1
-E        +  where 0 = &lt;MagicMock name='get_accuracy_list' id='2731882134016'&gt;.call_count
+E        +  where 0 = &lt;MagicMock name='get_accuracy_list' id='2748199811536'&gt;.call_count
 
-test\test_history_helper.py:71: AssertionError</failure></testcase><testcase classname="test.test_image_helper" name="test_image_helper_function" time="0.007"><failure message="AssertionError: assert 'C:\\Users\\p...est_image.png' == 'C:\\Users\\p...est_image.png'&#10;  Skipping 54 identical leading characters in diff, use -v to show&#10;  - \test_data\test_image.png&#10;  ?           -&#10;  + \test_datatest_image.png">def test_image_helper_function():
+test\test_history_helper.py:71: AssertionError</failure></testcase><testcase classname="test.test_image_helper" name="test_image_helper_function" time="0.002"><failure message="AssertionError: assert '' == 'C:\\Users\\p...est_image.png'&#10;  - C:\Users\preet\Desktop\CodeChallenge\CapChallenge\test\test_data\test_image.png">def test_image_helper_function():
         # prep
         attribute = "accuracy"
         history_dictionary = {
@@ -51,13 +51,10 @@ test\test_history_helper.py:71: AssertionError</failure></testcase><testcase cla
     
         # assert
 &gt;       assert actual_response == expected_response
-E       AssertionError: assert 'C:\\Users\\p...est_image.png' == 'C:\\Users\\p...est_image.png'
-E         Skipping 54 identical leading characters in diff, use -v to show
-E         - \test_data\test_image.png
-E         ?           -
-E         + \test_datatest_image.png
+E       AssertionError: assert '' == 'C:\\Users\\p...est_image.png'
+E         - C:\Users\preet\Desktop\CodeChallenge\CapChallenge\test\test_data\test_image.png
 
-test\test_image_helper.py:38: AssertionError</failure></testcase><testcase classname="test.test_image_helper" name="test_image_helper_defaults" time="0.006"><failure message="AssertionError: assert 'C:\\Users\\p...est_image.png' == 'C:\\Users\\p...est_image.png'&#10;  Skipping 54 identical leading characters in diff, use -v to show&#10;  - \test_data\test_image.png&#10;  ?           -&#10;  + \test_datatest_image.png">def test_image_helper_defaults():
+test\test_image_helper.py:38: AssertionError</failure></testcase><testcase classname="test.test_image_helper" name="test_image_helper_defaults" time="0.002"><failure message="AssertionError: assert '' == 'C:\\Users\\p...est_image.png'&#10;  - C:\Users\preet\Desktop\CodeChallenge\CapChallenge\test\test_data\test_image.png">def test_image_helper_defaults():
         # prep
         attribute = "accuracy"
         history_dictionary = {
@@ -84,13 +81,10 @@ test\test_image_helper.py:38: AssertionError</failure></testcase><testcase class
     
         # assert
 &gt;       assert actual_response == expected_response
-E       AssertionError: assert 'C:\\Users\\p...est_image.png' == 'C:\\Users\\p...est_image.png'
-E         Skipping 54 identical leading characters in diff, use -v to show
-E         - \test_data\test_image.png
-E         ?           -
-E         + \test_datatest_image.png
+E       AssertionError: assert '' == 'C:\\Users\\p...est_image.png'
+E         - C:\Users\preet\Desktop\CodeChallenge\CapChallenge\test\test_data\test_image.png
 
-test\test_image_helper.py:72: AssertionError</failure></testcase><testcase classname="test.test_image_helper" name="test_image_helper_exception" time="0.010"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">def test_image_helper_exception():
+test\test_image_helper.py:72: AssertionError</failure></testcase><testcase classname="test.test_image_helper" name="test_image_helper_exception" time="0.002"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">def test_image_helper_exception():
         # prep
         attribute = "accuracy"
         history_dictionary = {
