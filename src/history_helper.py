@@ -7,15 +7,16 @@ class history:
     def __init__(self):
         self.lis=[]
         self.dic={}
-        self.attribute = " "
-        self.title = " "
-        self.y_label = " "
-        self.x_label = " "
-        self.legend_location = " "
-        self.colour = " "
-        self.imagename = ''
-        self.currentdir = ''
-        self.imagefolder = ''
+        self.attribute = None
+        self.title = None
+        self.y_label = None
+        self.x_label = None
+        self.legend_location = None
+        self.colour = None
+        self.imagename = None
+        self.currentdir = None
+        self.imagefolder = None
+
     # setter method
     def set_epoch(self, list2):
        self.lis=list2
@@ -29,13 +30,13 @@ class history:
     def get_history(self):
         return self.dic
 
-    def set_image_detaails(self,image_name,current_dir,image_folder):
-        self.imagename=image_name
-        self.currentdir =current_dir
-        self.imagefolder=image_folder
+    def set_image_detaails(self, **kargs):
+        self.imagename =kargs['image_name']
+        self.imagefolder=kargs['image_folder']
 
 
     def get_image_detaails(self):
+
         return os.path.join(self.imagefolder,self.imagename)
 
 
@@ -43,6 +44,7 @@ def get_epoch_list(history)->list:
     '''
     :param history: instance
     :return: list of values
+
     '''
     return history.get_epoch()
 
@@ -71,4 +73,3 @@ def get_accuracy_per_epoch(history)->dict:
     his=list(chain(*get_list))
     dic_expected=dict(zip(Epoch, his))
     return dic_expected
-

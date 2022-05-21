@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="11" time="0.330" timestamp="2022-05-16T11:11:13.265657" hostname="Preetham"><testcase classname="test.test_data_helper" name="test_dataset_name_unix" time="0.002" /><testcase classname="test.test_data_helper" name="test_dataset_name_win" time="0.001" /><testcase classname="test.test_data_helper" name="test_iso8601_to_epoch_ms" time="0.004" /><testcase classname="test.test_data_helper" name="test_map_to_app_insight_entry_for_aml_parent_run" time="0.003" /><testcase classname="test.test_history_helper" name="test_get_epoch_list" time="0.001" /><testcase classname="test.test_history_helper" name="test_get_accuracy_list" time="0.001" /><testcase classname="test.test_history_helper" name="test_get_accuracy_per_epoch" time="0.001" /><testcase classname="test.test_history_helper" name="test_get_accuracy_per_epoch_method_calls" time="0.002"><failure message="AssertionError: assert 0 == 1&#10; +  where 0 = &lt;MagicMock name='get_accuracy_list' id='2748199811536'&gt;.call_count">mock_get_epoch_list = &lt;MagicMock name='get_accuracy_list' id='2748199811536'&gt;, mock_get_accuracy_list = &lt;MagicMock name='get_epoch_list' id='2748199864592'&gt;
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="11" time="0.386" timestamp="2022-05-21T13:05:08.269004" hostname="Preetham"><testcase classname="test.test_data_helper" name="test_dataset_name_unix" time="0.002" /><testcase classname="test.test_data_helper" name="test_dataset_name_win" time="0.001" /><testcase classname="test.test_data_helper" name="test_iso8601_to_epoch_ms" time="0.007" /><testcase classname="test.test_data_helper" name="test_map_to_app_insight_entry_for_aml_parent_run" time="0.004" /><testcase classname="test.test_history_helper" name="test_get_epoch_list" time="0.001" /><testcase classname="test.test_history_helper" name="test_get_accuracy_list" time="0.001" /><testcase classname="test.test_history_helper" name="test_get_accuracy_per_epoch" time="0.001" /><testcase classname="test.test_history_helper" name="test_get_accuracy_per_epoch_method_calls" time="0.003"><failure message="AssertionError: assert 0 == 1&#10; +  where 0 = &lt;MagicMock name='get_accuracy_list' id='2057827715056'&gt;.call_count">mock_get_epoch_list = &lt;MagicMock name='get_accuracy_list' id='2057827715056'&gt;, mock_get_accuracy_list = &lt;MagicMock name='get_epoch_list' id='2057827834896'&gt;
 
     @patch("src.history_helper.get_epoch_list")
     @patch("src.history_helper.get_accuracy_list")
@@ -18,9 +18,9 @@
         # assert
 &gt;       assert mock_get_epoch_list.call_count == 1
 E       AssertionError: assert 0 == 1
-E        +  where 0 = &lt;MagicMock name='get_accuracy_list' id='2748199811536'&gt;.call_count
+E        +  where 0 = &lt;MagicMock name='get_accuracy_list' id='2057827715056'&gt;.call_count
 
-test\test_history_helper.py:71: AssertionError</failure></testcase><testcase classname="test.test_image_helper" name="test_image_helper_function" time="0.002"><failure message="AssertionError: assert '' == 'C:\\Users\\p...est_image.png'&#10;  - C:\Users\preet\Desktop\CodeChallenge\CapChallenge\test\test_data\test_image.png">def test_image_helper_function():
+test\test_history_helper.py:71: AssertionError</failure></testcase><testcase classname="test.test_image_helper" name="test_image_helper_function" time="0.001"><failure message="AssertionError: assert False&#10; +  where False = &lt;function isfile at 0x000001DF1D17EAF0&gt;('C:\\Users\\preet\\Desktop\\CodeChallenge\\CapChallenge\\test\\test_data\\test_image.png')&#10; +    where &lt;function isfile at 0x000001DF1D17EAF0&gt; = &lt;module 'ntpath' from 'C:\\Users\\preet\\Anaconda3\\envs\\AudiPMTTechChallenge\\lib\\ntpath.py'&gt;.isfile&#10; +      where &lt;module 'ntpath' from 'C:\\Users\\preet\\Anaconda3\\envs\\AudiPMTTechChallenge\\lib\\ntpath.py'&gt; = os.path">def test_image_helper_function():
         # prep
         attribute = "accuracy"
         history_dictionary = {
@@ -50,11 +50,14 @@ test\test_history_helper.py:71: AssertionError</failure></testcase><testcase cla
                                     legend_location=legend_location, colour=colour)
     
         # assert
-&gt;       assert actual_response == expected_response
-E       AssertionError: assert '' == 'C:\\Users\\p...est_image.png'
-E         - C:\Users\preet\Desktop\CodeChallenge\CapChallenge\test\test_data\test_image.png
+        assert actual_response == expected_response
+&gt;       assert os.path.isfile(actual_response)
+E       AssertionError: assert False
+E        +  where False = &lt;function isfile at 0x000001DF1D17EAF0&gt;('C:\\Users\\preet\\Desktop\\CodeChallenge\\CapChallenge\\test\\test_data\\test_image.png')
+E        +    where &lt;function isfile at 0x000001DF1D17EAF0&gt; = &lt;module 'ntpath' from 'C:\\Users\\preet\\Anaconda3\\envs\\AudiPMTTechChallenge\\lib\\ntpath.py'&gt;.isfile
+E        +      where &lt;module 'ntpath' from 'C:\\Users\\preet\\Anaconda3\\envs\\AudiPMTTechChallenge\\lib\\ntpath.py'&gt; = os.path
 
-test\test_image_helper.py:38: AssertionError</failure></testcase><testcase classname="test.test_image_helper" name="test_image_helper_defaults" time="0.002"><failure message="AssertionError: assert '' == 'C:\\Users\\p...est_image.png'&#10;  - C:\Users\preet\Desktop\CodeChallenge\CapChallenge\test\test_data\test_image.png">def test_image_helper_defaults():
+test\test_image_helper.py:39: AssertionError</failure></testcase><testcase classname="test.test_image_helper" name="test_image_helper_defaults" time="0.001"><failure message="AssertionError: assert False&#10; +  where False = &lt;function isfile at 0x000001DF1D17EAF0&gt;('C:\\Users\\preet\\Desktop\\CodeChallenge\\CapChallenge\\test\\test_data\\test_image.png')&#10; +    where &lt;function isfile at 0x000001DF1D17EAF0&gt; = &lt;module 'ntpath' from 'C:\\Users\\preet\\Anaconda3\\envs\\AudiPMTTechChallenge\\lib\\ntpath.py'&gt;.isfile&#10; +      where &lt;module 'ntpath' from 'C:\\Users\\preet\\Anaconda3\\envs\\AudiPMTTechChallenge\\lib\\ntpath.py'&gt; = os.path">def test_image_helper_defaults():
         # prep
         attribute = "accuracy"
         history_dictionary = {
@@ -80,11 +83,14 @@ test\test_image_helper.py:38: AssertionError</failure></testcase><testcase class
                                     title=title, y_label=y_label)
     
         # assert
-&gt;       assert actual_response == expected_response
-E       AssertionError: assert '' == 'C:\\Users\\p...est_image.png'
-E         - C:\Users\preet\Desktop\CodeChallenge\CapChallenge\test\test_data\test_image.png
+        assert actual_response == expected_response
+&gt;       assert os.path.isfile(actual_response)
+E       AssertionError: assert False
+E        +  where False = &lt;function isfile at 0x000001DF1D17EAF0&gt;('C:\\Users\\preet\\Desktop\\CodeChallenge\\CapChallenge\\test\\test_data\\test_image.png')
+E        +    where &lt;function isfile at 0x000001DF1D17EAF0&gt; = &lt;module 'ntpath' from 'C:\\Users\\preet\\Anaconda3\\envs\\AudiPMTTechChallenge\\lib\\ntpath.py'&gt;.isfile
+E        +      where &lt;module 'ntpath' from 'C:\\Users\\preet\\Anaconda3\\envs\\AudiPMTTechChallenge\\lib\\ntpath.py'&gt; = os.path
 
-test\test_image_helper.py:72: AssertionError</failure></testcase><testcase classname="test.test_image_helper" name="test_image_helper_exception" time="0.002"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">def test_image_helper_exception():
+test\test_image_helper.py:73: AssertionError</failure></testcase><testcase classname="test.test_image_helper" name="test_image_helper_exception" time="0.002"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">def test_image_helper_exception():
         # prep
         attribute = "accuracy"
         history_dictionary = {
