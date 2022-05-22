@@ -54,7 +54,7 @@ def test_get_accuracy_per_epoch():
 
 @patch("src.history_helper.get_epoch_list")
 @patch("src.history_helper.get_accuracy_list")
-def test_get_accuracy_per_epoch_method_calls(mock_get_epoch_list, mock_get_accuracy_list):
+def test_get_accuracy_per_epoch_method_calls( mock_get_epoch_list,mock_get_accuracy_list):
     # prep
     history_epoch = [1, 2, 3, 4, 5]
     history_dictionary = {

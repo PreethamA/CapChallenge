@@ -31,8 +31,8 @@ class history:
         return self.dic
 
     def set_image_detaails(self, **kargs):
-        self.imagename =kargs['image_name']
-        self.imagefolder=kargs['image_folder']
+         self.imagename =kargs['image_name']
+         self.imagefolder=kargs['image_folder']
 
 
     def get_image_detaails(self):
@@ -64,12 +64,9 @@ def get_accuracy_per_epoch(history)->dict:
     '''
     :param history:Instance
     :return: dict of keys and values
-    '''
-    History = history.get_history()
-    Epoch = history.get_epoch()
-    get_list=[]
-    for k,v in History.items():
-       get_list.append(v)
-    his=list(chain(*get_list))
-    dic_expected=dict(zip(Epoch, his))
+     '''
+    his=get_accuracy_list(history)
+    Epoch=get_epoch_list(history)
+    dic_expected = dict(zip(Epoch, his))
     return dic_expected
+
