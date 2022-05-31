@@ -18,23 +18,27 @@ class history:
         self.imagefolder = None
 
     # setter method
+    @classmethod
     def set_epoch(self, list2):
        self.lis=list2
-
+    @classmethod
     def get_epoch(self):
         return self.lis
 
+    @classmethod
     def set_history(self, dic2):
         self.dic = dic2
 
+    @classmethod
     def get_history(self):
         return self.dic
 
+    @classmethod
     def set_image_detaails(self, **kargs):
          self.imagename =kargs['image_name']
          self.imagefolder=kargs['image_folder']
 
-
+    @classmethod
     def get_image_detaails(self):
 
         return os.path.join(self.imagefolder,self.imagename)
