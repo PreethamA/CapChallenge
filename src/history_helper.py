@@ -1,12 +1,13 @@
 
 from itertools import chain
 import os
-
+'''
+    
+'''
 class history:
-
     def __init__(self):
-        self.lis=[]
-        self.dic={}
+        self.lis = []
+        self.dic = {}
         self.attribute = None
         self.title = None
         self.y_label = None
@@ -16,7 +17,6 @@ class history:
         self.imagename = None
         self.currentdir = None
         self.imagefolder = None
-
     # setter method
     @classmethod
     def set_epoch(self, list2):

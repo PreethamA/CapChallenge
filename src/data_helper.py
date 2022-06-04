@@ -9,6 +9,17 @@ def get_dataset_name(filepath)->str:
     '''
     dir=os.path.basename(os.path.normpath(filepath))
     return dir
+
+def iso8601_to_epoch_ms(time_in_iso8601_format)->int:
+    '''
+    :param time_in_iso8601_format: string->is08601 time format
+    :return: int-> in milliseconds
+    '''
+    date = datetime.datetime.strptime(time_in_iso8601_format , '%Y-%m-%dT%H:%M:%S.%fZ')
+    millisec = (date - datetime.datetime(1970, 1, 1)).total_seconds() * 1000
+
+    return millisec
+
 def map_to_app_insight_entry(aml_run_details, experiment_id, experiment_name, env)->dict:
     '''
     :param aml_run_details: dict containing experiment execution details
@@ -46,13 +57,5 @@ def map_to_app_insight_entry(aml_run_details, experiment_id, experiment_name, en
     return ar
 
 
-def iso8601_to_epoch_ms(time_in_iso8601_format)->int:
-    '''
-    :param time_in_iso8601_format: string->is08601 time format
-    :return: int-> in milliseconds
-    '''
-    date = datetime.datetime.strptime(time_in_iso8601_format , '%Y-%m-%dT%H:%M:%S.%fZ')
-    millisec = (date - datetime.datetime(1970, 1, 1)).total_seconds() * 1000
 
-    return millisec
 
