@@ -1,218 +1,22 @@
 <?xml version="1.0" ?>
-<testsuites disabled="0" errors="0" failures="67" tests="68" time="0.0">
-	<testsuite disabled="0" errors="0" failures="24" name="flake8._\src\data_helper_py" skipped="0" tests="24" time="0" file=".\src\data_helper.py">
-		<testcase name="E302, expected 2 blank lines, found 1" file=".\src\data_helper.py" line="5">
-			<failure type="failure" message=".\src\data_helper.py:5:1: E302 expected 2 blank lines, found 1"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\data_helper.py" line="5">
-			<failure type="failure" message=".\src\data_helper.py:5:31: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="Q002, Remove bad quotes from docstring" file=".\src\data_helper.py" line="6">
-			<failure type="failure" message=".\src\data_helper.py:6:5: Q002 Remove bad quotes from docstring"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\data_helper.py" line="10">
-			<failure type="failure" message=".\src\data_helper.py:10:8: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="E302, expected 2 blank lines, found 1" file=".\src\data_helper.py" line="13">
-			<failure type="failure" message=".\src\data_helper.py:13:1: E302 expected 2 blank lines, found 1"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\data_helper.py" line="13">
-			<failure type="failure" message=".\src\data_helper.py:13:48: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="Q002, Remove bad quotes from docstring" file=".\src\data_helper.py" line="14">
-			<failure type="failure" message=".\src\data_helper.py:14:5: Q002 Remove bad quotes from docstring"/>
-		</testcase>
-		<testcase name="E203, whitespace before ','" file=".\src\data_helper.py" line="18">
-			<failure type="failure" message=".\src\data_helper.py:18:61: E203 whitespace before ','"/>
-		</testcase>
-		<testcase name="Q000, Remove bad quotes" file=".\src\data_helper.py" line="18">
-			<failure type="failure" message=".\src\data_helper.py:18:64: Q000 Remove bad quotes"/>
-		</testcase>
-		<testcase name="E302, expected 2 blank lines, found 1" file=".\src\data_helper.py" line="23">
-			<failure type="failure" message=".\src\data_helper.py:23:1: E302 expected 2 blank lines, found 1"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\data_helper.py" line="23">
-			<failure type="failure" message=".\src\data_helper.py:23:83: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="Q002, Remove bad quotes from docstring" file=".\src\data_helper.py" line="24">
-			<failure type="failure" message=".\src\data_helper.py:24:5: Q002 Remove bad quotes from docstring"/>
-		</testcase>
-		<testcase name="E231, missing whitespace after ','" file=".\src\data_helper.py" line="39">
-			<failure type="failure" message=".\src\data_helper.py:39:19: E231 missing whitespace after ','"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\data_helper.py" line="40">
-			<failure type="failure" message=".\src\data_helper.py:40:21: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\data_helper.py" line="41">
-			<failure type="failure" message=".\src\data_helper.py:41:25: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="Q000, Remove bad quotes" file=".\src\data_helper.py" line="43">
-			<failure type="failure" message=".\src\data_helper.py:43:27: Q000 Remove bad quotes"/>
-		</testcase>
-		<testcase name="Q000, Remove bad quotes" file=".\src\data_helper.py" line="43">
-			<failure type="failure" message=".\src\data_helper.py:43:46: Q000 Remove bad quotes"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\data_helper.py" line="46">
-			<failure type="failure" message=".\src\data_helper.py:46:25: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\data_helper.py" line="48">
-			<failure type="failure" message=".\src\data_helper.py:48:28: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\data_helper.py" line="52">
-			<failure type="failure" message=".\src\data_helper.py:52:28: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="E226, missing whitespace around arithmetic operator" file=".\src\data_helper.py" line="52">
-			<failure type="failure" message=".\src\data_helper.py:52:50: E226 missing whitespace around arithmetic operator"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\data_helper.py" line="54">
-			<failure type="failure" message=".\src\data_helper.py:54:25: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\data_helper.py" line="55">
-			<failure type="failure" message=".\src\data_helper.py:55:23: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="W391, blank line at end of file" file=".\src\data_helper.py" line="61">
-			<failure type="failure" message=".\src\data_helper.py:61:1: W391 blank line at end of file"/>
-		</testcase>
+<testsuites disabled="0" errors="0" failures="0" tests="6" time="0.0">
+	<testsuite disabled="0" errors="0" failures="0" name="flake8._\src\data_helper_py" skipped="0" tests="1" time="0" file=".\src\data_helper.py">
+		<testcase name="Check passed" file=".\src\data_helper.py"/>
 	</testsuite>
-	<testsuite disabled="0" errors="0" failures="30" name="flake8._\src\history_helper_py" skipped="0" tests="30" time="0" file=".\src\history_helper.py">
-		<testcase name="Q001, Remove bad quotes from multiline string" file=".\src\history_helper.py" line="4">
-			<failure type="failure" message=".\src\history_helper.py:4:1: Q001 Remove bad quotes from multiline string"/>
-		</testcase>
-		<testcase name="W293, blank line contains whitespace" file=".\src\history_helper.py" line="5">
-			<failure type="failure" message=".\src\history_helper.py:5:1: W293 blank line contains whitespace"/>
-		</testcase>
-		<testcase name="E302, expected 2 blank lines, found 0" file=".\src\history_helper.py" line="7">
-			<failure type="failure" message=".\src\history_helper.py:7:1: E302 expected 2 blank lines, found 0"/>
-		</testcase>
-		<testcase name="E301, expected 1 blank line, found 0" file=".\src\history_helper.py" line="21">
-			<failure type="failure" message=".\src\history_helper.py:21:5: E301 expected 1 blank line, found 0"/>
-		</testcase>
-		<testcase name="E111, indentation is not a multiple of four" file=".\src\history_helper.py" line="23">
-			<failure type="failure" message=".\src\history_helper.py:23:8: E111 indentation is not a multiple of four"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\history_helper.py" line="23">
-			<failure type="failure" message=".\src\history_helper.py:23:16: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="E301, expected 1 blank line, found 0" file=".\src\history_helper.py" line="24">
-			<failure type="failure" message=".\src\history_helper.py:24:5: E301 expected 1 blank line, found 0"/>
-		</testcase>
-		<testcase name="E111, indentation is not a multiple of four" file=".\src\history_helper.py" line="38">
-			<failure type="failure" message=".\src\history_helper.py:38:10: E111 indentation is not a multiple of four"/>
-		</testcase>
-		<testcase name="E117, over-indented" file=".\src\history_helper.py" line="38">
-			<failure type="failure" message=".\src\history_helper.py:38:10: E117 over-indented"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\history_helper.py" line="38">
-			<failure type="failure" message=".\src\history_helper.py:38:26: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="Q000, Remove bad quotes" file=".\src\history_helper.py" line="38">
-			<failure type="failure" message=".\src\history_helper.py:38:32: Q000 Remove bad quotes"/>
-		</testcase>
-		<testcase name="E111, indentation is not a multiple of four" file=".\src\history_helper.py" line="39">
-			<failure type="failure" message=".\src\history_helper.py:39:10: E111 indentation is not a multiple of four"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\history_helper.py" line="39">
-			<failure type="failure" message=".\src\history_helper.py:39:26: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="Q000, Remove bad quotes" file=".\src\history_helper.py" line="39">
-			<failure type="failure" message=".\src\history_helper.py:39:33: Q000 Remove bad quotes"/>
-		</testcase>
-		<testcase name="E231, missing whitespace after ','" file=".\src\history_helper.py" line="44">
-			<failure type="failure" message=".\src\history_helper.py:44:45: E231 missing whitespace after ','"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\history_helper.py" line="47">
-			<failure type="failure" message=".\src\history_helper.py:47:28: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="Q002, Remove bad quotes from docstring" file=".\src\history_helper.py" line="48">
-			<failure type="failure" message=".\src\history_helper.py:48:5: Q002 Remove bad quotes from docstring"/>
-		</testcase>
-		<testcase name="E302, expected 2 blank lines, found 1" file=".\src\history_helper.py" line="55">
-			<failure type="failure" message=".\src\history_helper.py:55:1: E302 expected 2 blank lines, found 1"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\history_helper.py" line="55">
-			<failure type="failure" message=".\src\history_helper.py:55:31: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="Q002, Remove bad quotes from docstring" file=".\src\history_helper.py" line="56">
-			<failure type="failure" message=".\src\history_helper.py:56:5: Q002 Remove bad quotes from docstring"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\history_helper.py" line="61">
-			<failure type="failure" message=".\src\history_helper.py:61:13: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\history_helper.py" line="62">
-			<failure type="failure" message=".\src\history_helper.py:62:6: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="E231, missing whitespace after ','" file=".\src\history_helper.py" line="63">
-			<failure type="failure" message=".\src\history_helper.py:63:10: E231 missing whitespace after ','"/>
-		</testcase>
-		<testcase name="E111, indentation is not a multiple of four" file=".\src\history_helper.py" line="64">
-			<failure type="failure" message=".\src\history_helper.py:64:8: E111 indentation is not a multiple of four"/>
-		</testcase>
-		<testcase name="E302, expected 2 blank lines, found 1" file=".\src\history_helper.py" line="67">
-			<failure type="failure" message=".\src\history_helper.py:67:1: E302 expected 2 blank lines, found 1"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\history_helper.py" line="67">
-			<failure type="failure" message=".\src\history_helper.py:67:36: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="Q002, Remove bad quotes from docstring" file=".\src\history_helper.py" line="68">
-			<failure type="failure" message=".\src\history_helper.py:68:5: Q002 Remove bad quotes from docstring"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\history_helper.py" line="72">
-			<failure type="failure" message=".\src\history_helper.py:72:8: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\history_helper.py" line="73">
-			<failure type="failure" message=".\src\history_helper.py:73:10: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="W391, blank line at end of file" file=".\src\history_helper.py" line="76">
-			<failure type="failure" message=".\src\history_helper.py:76:1: W391 blank line at end of file"/>
-		</testcase>
+	<testsuite disabled="0" errors="0" failures="0" name="flake8._\src\history_helper_py" skipped="0" tests="1" time="0" file=".\src\history_helper.py">
+		<testcase name="Check passed" file=".\src\history_helper.py"/>
 	</testsuite>
-	<testsuite disabled="0" errors="0" failures="10" name="flake8._\src\image_helper_py" skipped="0" tests="10" time="0" file=".\src\image_helper.py">
-		<testcase name="F401, 'src.history_helper.history' imported but unused" file=".\src\image_helper.py" line="1">
-			<failure type="failure" message=".\src\image_helper.py:1:1: F401 'src.history_helper.history' imported but unused"/>
-		</testcase>
-		<testcase name="F811, redefinition of unused 'history' from line 1" file=".\src\image_helper.py" line="5">
-			<failure type="failure" message=".\src\image_helper.py:5:15: F811 redefinition of unused 'history' from line 1"/>
-		</testcase>
-		<testcase name="E231, missing whitespace after ','" file=".\src\image_helper.py" line="5">
-			<failure type="failure" message=".\src\image_helper.py:5:22: E231 missing whitespace after ','"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\image_helper.py" line="5">
-			<failure type="failure" message=".\src\image_helper.py:5:31: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="Q002, Remove bad quotes from docstring" file=".\src\image_helper.py" line="6">
-			<failure type="failure" message=".\src\image_helper.py:6:5: Q002 Remove bad quotes from docstring"/>
-		</testcase>
-		<testcase name="Q000, Remove bad quotes" file=".\src\image_helper.py" line="12">
-			<failure type="failure" message=".\src\image_helper.py:12:29: Q000 Remove bad quotes"/>
-		</testcase>
-		<testcase name="Q000, Remove bad quotes" file=".\src\image_helper.py" line="13">
-			<failure type="failure" message=".\src\image_helper.py:13:24: Q000 Remove bad quotes"/>
-		</testcase>
-		<testcase name="E225, missing whitespace around operator" file=".\src\image_helper.py" line="14">
-			<failure type="failure" message=".\src\image_helper.py:14:17: E225 missing whitespace around operator"/>
-		</testcase>
-		<testcase name="E231, missing whitespace after ','" file=".\src\image_helper.py" line="14">
-			<failure type="failure" message=".\src\image_helper.py:14:39: E231 missing whitespace after ','"/>
-		</testcase>
-		<testcase name="Q000, Remove bad quotes" file=".\src\image_helper.py" line="14">
-			<failure type="failure" message=".\src\image_helper.py:14:40: Q000 Remove bad quotes"/>
-		</testcase>
+	<testsuite disabled="0" errors="0" failures="0" name="flake8._\src\image_helper_py" skipped="0" tests="1" time="0" file=".\src\image_helper.py">
+		<testcase name="Check passed" file=".\src\image_helper.py"/>
 	</testsuite>
 	<testsuite disabled="0" errors="0" failures="0" name="flake8._\test\test_data_helper_py" skipped="0" tests="1" time="0" file=".\test\test_data_helper.py">
 		<testcase name="Check passed" file=".\test\test_data_helper.py"/>
 	</testsuite>
-	<testsuite disabled="0" errors="0" failures="2" name="flake8._\test\test_history_helper_py" skipped="0" tests="2" time="0" file=".\test\test_history_helper.py">
-		<testcase name="E201, whitespace after '('" file=".\test\test_history_helper.py" line="57">
-			<failure type="failure" message=".\test\test_history_helper.py:57:46: E201 whitespace after '('"/>
-		</testcase>
-		<testcase name="E231, missing whitespace after ','" file=".\test\test_history_helper.py" line="57">
-			<failure type="failure" message=".\test\test_history_helper.py:57:66: E231 missing whitespace after ','"/>
-		</testcase>
+	<testsuite disabled="0" errors="0" failures="0" name="flake8._\test\test_history_helper_py" skipped="0" tests="1" time="0" file=".\test\test_history_helper.py">
+		<testcase name="Check passed" file=".\test\test_history_helper.py"/>
 	</testsuite>
-	<testsuite disabled="0" errors="0" failures="1" name="flake8._\test\test_image_helper_py" skipped="0" tests="1" time="0" file=".\test\test_image_helper.py">
-		<testcase name="W391, blank line at end of file" file=".\test\test_image_helper.py" line="110">
-			<failure type="failure" message=".\test\test_image_helper.py:110:1: W391 blank line at end of file"/>
-		</testcase>
+	<testsuite disabled="0" errors="0" failures="0" name="flake8._\test\test_image_helper_py" skipped="0" tests="1" time="0" file=".\test\test_image_helper.py">
+		<testcase name="Check passed" file=".\test\test_image_helper.py"/>
 	</testsuite>
 </testsuites>
 

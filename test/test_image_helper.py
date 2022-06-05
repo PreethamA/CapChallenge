@@ -103,8 +103,3 @@ def test_image_helper_exception():
         get_image(history=history_obj, attribute=attribute,
                   image_folder=image_folder, image_name=image_name,
                   title=title, y_label=y_label)
-
-
-
-
-
