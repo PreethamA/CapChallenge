@@ -1,23 +1,12 @@
 
 from itertools import chain
 import os
+from dataclasses import dataclass
 
 
-class history:
-    def __init__(self):
-        self.lis = []
-        self.dic = {}
-        self.attribute = None
-        self.title = None
-        self.y_label = None
-        self.x_label = None
-        self.legend_location = None
-        self.colour = None
-        self.imagename = None
-        self.currentdir = None
-        self.imagefolder = None
+@dataclass
+class history(object):
     # setter method
-
     @classmethod
     def set_epoch(self, list2):
         self.lis = list2
